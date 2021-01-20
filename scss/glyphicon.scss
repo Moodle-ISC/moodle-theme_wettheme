@@ -1,0 +1,13 @@
+// Import Glyphicons Halflings
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src:
+        url('[[font:theme|glyphicons_halflings_regular.woff]]') format('woff'),
+        url('[[font:theme|glyphicons_halflings_regular.woff2]]') format('woff2'),
+        url('[[font:theme|glyphicons_halflings_regular.eot]]') format('embedded-opentype'),
+        url('[[font:theme|glyphicons_halflings_regular.ttp]]') format('truetype'),
+        url('[[font:theme|glyphicons_halflings_regular.svg]]') format('svg');
+}
+
+@import "glyphicon";

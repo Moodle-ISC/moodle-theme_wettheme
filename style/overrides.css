@@ -1,0 +1,350 @@
+@charset "utf-8";
+
+/*Background image */
+
+body {
+    background-image: url([[pix:theme|background]]);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-color: #fff !important;
+}
+
+/* Add background image for login page */
+#page-login-index {
+    background-image: url([[pix:theme|login_background]]);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-color: #fff !important;
+}
+
+#page-login-index #page-footer {
+    display: none;
+}
+
+#page-login-index .card {
+    -webkit-box-shadow: 6px 7px 8px -4px rgba(168, 166, 168, 0.75);
+    box-shadow: 6px 7px 8px -4px rgba(168, 166, 168, 0.75);
+
+}
+
+#page-login-index .card {
+    -moz-box-shadow: 6px 7px 8px -4px rgba(168, 166, 168, 0.75);
+}
+
+/* DK: change colour of links in navbar to same as wet */
+
+.navbar-light {
+    background-color: #f5f5f5 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #295376;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.nav-link:focus {
+    color: #0535d2;
+    text-decoration: underline;
+}
+
+.navbar-light .navbar-nav .nav-link:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.navbar-light .navbar-brand {
+    color: #295376;
+}
+
+.navbar-light .navbar-brand:hover,
+.navbar-brand:focus {
+    color: #0535d2;
+    text-decoration: underline;
+}
+
+.navbar-light .navbar-brand:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+/* DK: make all elements w/ row class display inline as display:flex was pushing
+   all the first rows to the far right of screen. */
+
+.row {
+    display: inline;
+}
+
+/* DK: exceptions to the above on admin search login page */
+
+#page-admin-search .row {
+    display: flex;
+}
+
+#page-login-index .row {
+    display: flex;
+}
+
+/* DK: add colour to login page header */
+
+#page-login-index .card-header {
+    background-color: #fcf8e3;
+}
+
+/* DK: hide horizontal scroll bar on login page */
+
+#region-main {
+    overflow: hidden;
+}
+
+/*DK: lists in admin options were misaligned; making them inline elements fixes them. */
+
+.list-unstyled {
+    display: inline;
+}
+
+/* Make footer background darker and links lighter. Colours from other gc websites. */
+
+#page-footer .bg-dark {
+    background-color: #26374a !important;
+}
+
+/* DK: add background image to footer */
+
+footer {
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-color: #26374a;
+}
+
+footer {
+    background-image: url([[pix:theme|landscape]]);
+}
+
+/* DK: add padding between lines. */
+
+footer div {
+    padding: 2px;
+}
+
+/* Make footer links lighter */
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer a:visited {
+    color: #fff;
+}
+
+/* DK: Fix display of error messages */
+
+.form-control-feedback,
+.invalid-feedback,
+.form-control.is-invalid ~ .invalid-feedback {
+    display: contents;
+}
+
+/* DK: Style cards */
+
+.card,
+.p-3 {
+    background-color: #fefefe;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Add padding to static page content */
+
+#page-local-staticpage-view,
+#static-content {
+    padding: 12px;
+}
+
+#page-local-staticpage-view,
+.align-items-center {
+    padding-left: 12px;
+}
+
+/* DK: url locations of fonts edited to reflect Moodle file structure */
+
+@font-face {
+    font-family: "Glyphicons Halflings";
+    src:
+        url([[font:theme|glyphicons_halflings_regular.woff]]) format('woff'),
+        url([[font:theme|glyphicons_halflings_regular.woff2]]) format('woff2'),
+        url([[font:theme|glyphicons_halflings_regular.eot]]) format('eot'),
+        url([[font:theme|glyphicons_halflings_regular.ttp]]) format('ttf'),
+        url([[font:theme|glyphicons_halflings_regular.svg]]) format('svg');
+}
+
+.p-3:before {
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 5px;
+     /* background: linear-gradient(to right, #9ed111, #90c4ef); */
+     top: -5px;
+     left: -1px;
+
+    background-color: #477394;
+    background-image: linear-gradient(315deg, #39cde5 0%, #477394 90%);
+
+}
+
+ .p-3:hover {
+     -webkit-box-shadow: 6px 7px 8px -4px rgba(168, 166, 168, 0.75);
+     box-shadow: 6px 7px 8px -4px rgba(168, 166, 168, 0.75);
+ }
+
+/* align link sections with above div */
+
+.footer-about {
+    padding-left: 0px;
+}
+
+.footer-terms {
+    padding-left: 0px;
+    padding-top: 10px;
+}
+
+.canada-logo {
+    padding-left: 0px;
+}
+
+
+/* DK: course custom fields on front page */
+
+.customfield:nth-of-type(even) {
+    font-size: x-small;
+    font-weight: bold;
+    background-color: #e7f1fc;
+    text-align: left;
+}
+
+.customfield:nth-of-type(odd) {
+    font-size: x-small;
+    font-weight: bold;
+    background-color: #d4edef;
+    text-align: left;
+}
+
+/* DK: course management buttons */
+
+/*
+.request-button {
+    background-color: #e2c633;
+    color: snow;
+}
+
+.add-button {
+    background-color: #e2c633;
+    color: snow;
+}
+
+.pending-button {
+    background-color: #e2c633;
+    color: snow;
+}
+
+.request-button {
+    background-color: #e2c633;
+    color: snow;
+}
+
+*/
+
+/* DK: default value for phone number field */
+#id_customfield_requestcourse_phone {
+    color: #cacaca;
+}
+
+/*
+
+/* DK: background image for main card headers?
+.card {
+    background-image: url([[pix:theme|card_header]]);
+    background-repeat: no-repeat;
+    background-position-x: 500px;
+} */
+
+
+/* DK: Make course header ignore flex and skip line */
+#course-header {
+    width: 100%;
+}
+
+/* DK: align course icon with rest of fields, anchor left */
+.course-message {
+    width: 100%;
+    padding-left: 12px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+}
+
+/* DK: course icon */
+.fa-university {
+    width: 15%;
+    border: solid red 2px;
+}
+
+/* DK: justify text */
+.course-message p {
+    text-align: justify;
+}
+
+/*DK: Popover stuff -? */
+.fa-question-circle:before {
+    content: "";
+}
+
+.fa-fw {
+    width: 1.2857142857em;
+    text-align: center;
+}
+
+.text-info,
+.highlight {
+    color: #5bc0de !important;
+}
+
+a.text-info:hover,
+a.highlight:hover,
+a.text-info:focus,
+a.highlight:focus {
+    color: #28a1c5 !important;
+}
+
+@media (min-width: 576px) {
+    .float-sm-left {
+        float: left !important;
+    }
+    .float-sm-right {
+        float: right !important;
+    }
+    .float-sm-none {
+        float: none !important;
+    }
+
+/* DK : fix text editors */
+.editor_atto_content.form-control {
+    width: inherit;
+}
+
+}
+
